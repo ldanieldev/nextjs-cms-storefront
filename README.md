@@ -1,5 +1,7 @@
 # A Full Stack E-Commerce Storefront using NextJS 14, TailwindCss, Prisma, Stripe, & MySQL
 
+### Demo URL: [https://nextjs-cms-storefront.vercel.app/](https://nextjs-cms-storefront.vercel.app/)
+
 An example storefront for a store created via the [NextJs Admin CMS Project](https://github.com/ldanieldev/nextjs-store-admin-cms)
 
 For DEMO, use [Stripe Testing Cards](https://stripe.com/docs/testing)
