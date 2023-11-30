@@ -8,6 +8,7 @@ import getColors from '@/actions/get-colors';
 import getProducts from '@/actions/get-products';
 import getSizes from '@/actions/get-sizes';
 
+import { revalidatePath } from 'next/cache';
 import Filter from './_components/filter';
 import MobileFilters from './_components/mobile-filters';
 
@@ -22,6 +23,8 @@ type props = {
 };
 
 const categoryPage = async ({ params, searchParams }: props) => {
+  revalidatePath('/category/[categoryId]');
+
   const products = await getProducts({
     categoryId: params.categoryId,
     colorId: searchParams.colorId,

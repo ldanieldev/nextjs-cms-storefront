@@ -3,8 +3,11 @@ import getProducts from '@/actions/get-products';
 import ProductList from '@/components/product-list';
 import Billboard from '@/components/ui/billboard';
 import Container from '@/components/ui/container';
+import { revalidatePath } from 'next/cache';
 
 const HomePage = async () => {
+  revalidatePath('/product/[productId]');
+
   const products = await getProducts({ isFeatured: true });
   const billboard = await getBillboard('c2e7c027-2228-4605-8a6c-3ac475898593');
 
