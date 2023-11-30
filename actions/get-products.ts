@@ -23,7 +23,7 @@ export default async function getProducts(query: Query): Promise<Product[]> {
   });
 
   const res = await fetch(url);
-  revalidatePath(url);
+  revalidatePath('/');
 
   return res.json();
 }
